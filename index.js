@@ -1,9 +1,10 @@
 var cheerio = require("cheerio"); 
 var request = require("request");
 var discord = require("discord.js");
+var config = require("./config.json");
 
 var bot = new discord.Client();
-//bot.login("token"); unique bot token
+bot.login(config.TOKEN); //unique bot token stored in config.json
 
 bot.on("ready", function() { console.log("bot is online!"); } );
 bot.on("message", function(message) {
