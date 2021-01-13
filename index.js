@@ -3,31 +3,10 @@ var request = require("request");
 var discord = require("discord.js");
 
 var bot = new discord.Client();
-bot.login("Nzk1MDU1ODg4NDkwMTY4MzUw.X_Dzfw.W2rom3yiJ54O-aOAhHVEovWUaao");
+//bot.login("token"); unique bot token
 
 bot.on("ready", function() { console.log("bot is online!"); } );
 bot.on("message", function(message) {
-
-    if(message.content === "!eric"){
-        const newEmbed = new discord.MessageEmbed()
-        .setTitle("eric nguyen")
-        .attachFiles(['../eric.png'])
-        .setImage('attachment://eric.png');
-
-        message.channel.send(newEmbed);
-        return;
-    }
-
-    if(message.content === "!kyle"){
-        const newEmbed = new discord.MessageEmbed()
-        .setTitle("kyle")
-        .attachFiles(['../kyle.png'])
-        .setImage('attachment://kyle.png');
-
-        message.channel.send(newEmbed);
-        return;
-    }
-
 
     var parts = message.content.split(" "); 
     if (parts[0] === "!pic") { 
