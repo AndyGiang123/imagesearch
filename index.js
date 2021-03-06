@@ -2,7 +2,7 @@ var cheerio = require("cheerio");
 var request = require("request");
 var discord = require("discord.js");
 var config = require("./config.json");
-
+//hi test
 var bot = new discord.Client();
 bot.login(config.TOKEN); //unique bot token stored in config.json
 
